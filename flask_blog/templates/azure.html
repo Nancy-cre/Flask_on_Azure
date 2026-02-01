@@ -5,7 +5,29 @@
     <title>Azure</title>
 </head>
 <body>
-    <p>Azureだよ</p>
+    <table>
+        <caption>
+            在庫一覧
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">商品名</th>
+                <th scope="col">数量</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items: %}
+            <tr>
+                <th scope="row">
+                    {{ item.name }}
+                </th>
+                <td>
+                    {{ item.count }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
 {% endblock %}
